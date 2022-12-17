@@ -1,33 +1,34 @@
 var medicamentos = []
 
-function addMed(){
+function addMed() {
     event.preventDefault()
     let newMed = {
-        "medName": document.getElementById('fname').value,
-        "medQtd": document.getElementById('fqtd').value,
-        "medClass": document.getElementById('fclass').value
+        "medName": document.getElementById("fname").value,
+        "medQtd": document.getElementById("fqtd").value,
+        "medClass": document.getElementById("fclass").value
     }
-    resetForm()
-    medicamentos.push(newMed)
+    resetForm();
+    meds.push(newMed)
     renderTable()
 }
 
 function deleteMed(index){
-    medicamentos.splice(index, 1);
+    medicamentos.splice(index,1)
     renderTable()
 }
 
 function renderTable(){
-    let table = document.getElementById('dataTable')
-    table.innerHTML = 
+    let table = document.getElementById("dataTable")
+    table.innerHTML =  
     `<th>ID</th>
-    <th>Medicamentos</th>
+    <th>Medicamento</th>
     <th>Quantidade</th>
     <th>Classe de Medicamento</th>
     <th>Remover</th>`
 
+
     for(let i = 0; i < medicamentos.length; i++){
-        table.innerHTML = table.innerHTML + 
+        table.innerHTML = table.innerHTML  +  
         `<tr>
             <td>${i}</td>
             <td>${medicamentos[i].medName}</td>
@@ -37,6 +38,7 @@ function renderTable(){
         </tr>`
     }
 }
+
 function resetForm(){
     document.getElementById("fname").value = ""
     document.getElementById("fqtd").value = ""
