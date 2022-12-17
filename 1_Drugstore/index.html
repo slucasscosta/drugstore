@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Medicamentos</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <nav>
+        <h1>Home</h1>
+        <h1>Cadastro<br> de Medicamentos</h1>
+        <h1>Cadastro<br> de Vacinas</h1>
+        <h1>Cadastro<br> de Cosméticos</h1>
+    </nav>
+    <header>
+        <img src="assets/img/logo.png" id="logo">
+        <div>
+            <h1 id="title">Cadastro de Medicamentos</h1>
+            <h2 id="subtitle">Farmárica da Gente</h2>
+        </div>
+    </header>
+    <section id="info-form">
+        <form>
+            <label>Nome do Medicamento</label>
+            <input autocomplete="off" type="text" required id="fname" name="medName" >
+            <label>Quantidade Disponível</label>
+            <input autocomplete="off" type="text" required id="fqtd" name="medQtd" >
+            <label>Classe do Medicamento</label>
+            <input autocomplete="off" type="text" required id="fclass" name="medClass" >
+            <button class="send-button" type="submit"> Cadastrar </button>
+        </form>
+        <div>
+            <table id="dataTable">
+                <tr>
+                    <th>ID</th>
+                    <th>Medicamentos</th>
+                    <th>Quantidade</th>
+                    <th>Classe de Medicamento</th>
+                    <th>Remover</th>
+                </tr>
+            </table>
+        </div>    
+    </section>
+    <script src="assets/main.js"></script>
+</body>
+</html>
